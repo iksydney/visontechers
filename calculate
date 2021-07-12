@@ -1,0 +1,21 @@
+from math import sqrt
+import math
+
+def desc_stats(X):
+
+  # Calculate the minimum and maximum value of X
+  min_value = min(X)
+  max_value = max(X)
+
+  # Calculate the Count and mean value of X.
+  count = len(X)
+  mean = sum(X) / count
+
+  # calculate the variance of X
+  deviation = [(x-mean)** 2 for x in X]
+  variance = sum(deviation)/ count
+
+  # calculate the standard deviation of X.
+  stdv = math.sqrt(variance)
+
+  return stdv
